@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code_RIR_AIM_TRAINER // V1.0</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="grid-bg"></div>
+
+    <div class="menu">
+        <h1 class="glitch" data-text="Code_RIR_AIM_TRAINER">Code_RIR_AIM_TRAINER</h1>
+
+        <div class="difficulty">
+            <button onclick="setDifficulty('easy')" class="cyber-btn">EASY_MODE</button>
+            <button onclick="setDifficulty('medium')" class="cyber-btn active">MID_TIER</button>
+            <button onclick="setDifficulty('hard')" class="cyber-btn">HARDCORE</button>
+        </div>
+
+        <button class="start-btn cyber-btn-large" onclick="startGame()">INITIALIZE</button>
+
+        <p class="best-score-text">HIGH_SCORE // <span id="bestScore" class="glow-text">0</span></p>
+    </div>
+
+    <div class="stats hidden">
+        <div class="stat-box">T-MINUS // <span id="time">30</span>s</div>
+        <div class="stat-box">SCORE // <span id="score">0</span></div>
+        <div class="stat-box">ACCURACY // <span id="accuracy">0</span>%</div>
+        <div class="stat-box">STREAK // <span id="streak">0</span></div>
+        <button class="cyber-btn" onclick="location.reload()"
+            style="margin: -5px 0 -5px 20px; padding: 5px 15px; font-size: 16px; align-self: center;">RESTART</button>
+    </div>
+
+    <div id="gameArea" class="hidden"></div>
+
+    <div id="gameOverModal" class="hidden">
+        <div class="modal-content">
+            <h2 class="glitch" data-text="SYSTEM_FAILURE">SYSTEM_FAILURE</h2>
+            <p>FINAL_SCORE: <span id="finalScore" class="glow-text">0</span></p>
+            <p>ACCURACY: <span id="finalAccuracy" class="glow-text">0</span>%</p>
+            <button class="cyber-btn-large restart-btn" onclick="location.reload()">REBOOT_SYSTEM</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        POWERED_BY // <span class="glow-text">Code_RIR</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
